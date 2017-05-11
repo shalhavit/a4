@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Faker\Factory;
 
 class UsersTableSeeder extends Seeder
 {
@@ -16,21 +17,29 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->truncate();
 
         // generate 3 users/author
+        $faker = Factory::create();
+
         DB::table('users')->insert([
             [
                 'name' => "Daniel Baldemus",
+                'slug' => "daniel-baldemus",
                 'email' => "baldamusdaniel@gmail.com",
-                'password' => bcrypt('secret')
+                'password' => bcrypt('secret'),
+                'bio' => $faker->text(rand(250, 300))
             ],
             [
                 'name' => "Icnelly Pineda",
+                'slug' => "icnelly-pineda",
                 'email' => "icnelly.pineda@gmail.com",
-                'password' => bcrypt('secret')
+                'password' => bcrypt('secret'),
+                'bio' => $faker->text(rand(250, 300))
             ],
             [
                 'name' => "Patricia del Castillo",
+                'slug' => "patricia-castillo",
                 'email' => "patricia.delcastillor@gmail.com",
-                'password' => bcrypt('secret')
+                'password' => bcrypt('secret'),
+                'bio' => $faker->text(rand(250, 300))
             ],
         ]);
     }
