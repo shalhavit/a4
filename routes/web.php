@@ -30,3 +30,10 @@ Route::get('/author/{author}', [
     'uses' => 'BlogController@author',
     'as'   => 'author'
 ]);
+
+
+Auth::routes();
+
+Route::get('/home', 'Backend\HomeController@index')->name('home');
+
+Route::resource('/backend/blog', 'Backend\BlogController', ['as' => 'backend']);

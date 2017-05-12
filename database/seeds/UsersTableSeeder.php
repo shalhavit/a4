@@ -23,8 +23,8 @@ class UsersTableSeeder extends Seeder
             [
                 'name' => "Daniel Baldemus",
                 'slug' => "daniel-baldemus",
-                'email' => "baldamusdaniel@gmail.com",
-                'password' => bcrypt('secret'),
+                'email' => "test@gmail.com",
+                'password' => bcrypt('test'),
                 'bio' => $faker->text(rand(250, 300))
             ],
             [
