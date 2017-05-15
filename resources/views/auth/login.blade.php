@@ -35,11 +35,11 @@
                     <input type="password" class="form-control" placeholder="Password" name="password">
                     <span class="fa fa-lock form-control-feedback"></span>
 
-        @if ($errors->has('password'))
-            <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-            </span>
-        @endif
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('password') }}</strong>
+                        </span>
+                    @endif
                 </div>
                 <div class="row">
                     <div class="col-xs-8">
